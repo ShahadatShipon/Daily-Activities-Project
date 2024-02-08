@@ -81,15 +81,13 @@ print("----------------------Welcome To Daily Activities Project----------------
 loop=1
 while(loop):
     print("What do you want to do?\n 1.Update.\n 2.Preview.")
-    choice=int(input("Enter your choice : "))
-    if choice==1:
+    if (choice := int(input("Enter your choice : ")))==1:
         l=1
         while(l):
             print("Which one do you want to update?\n 1.Daily Food.\n 2.Daily Spendings.\n 3.study.\n 4.prayer.\n 5.sleep.\n 6.other acivities.")
             up_list=int(input("Enter your choice :"))
             update(up_list)
-            a = input("Wanna update another list?(y/n)")
-            if a == "n":
+            if (a := input("Wanna update another list?(y/n)")) == "n":
                 l = 0
     elif choice==2:
         l=1
@@ -103,6 +101,5 @@ while(loop):
                 l = 0
     else:
         print("You entered wrong input.\n")
-    again=input("Wanna update or preview again?(y/n)")
-    if again == "n":
+    if (again := input("Wanna update or preview again?(y/n)")) == "n":
         loop=0
